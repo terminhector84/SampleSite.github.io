@@ -1,1 +1,433 @@
+ <!DOCTYPE html>
+	<html lang="en">
+		<head><title>my first web page</title>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+			<style>
+				*{
+				    font-family: Sans-serif, Helvetica, Arial;
+				    box-sizing:border-box;
+					}
+				body{
+					background:#f0f0f2;
+					margin:0;
+					padding:0;
+					font-size:100%;
+					font:inherit;
+					vertical-align:baseline;
+					
+				   }
+				#header {
+					width: 100%;
+					height: 100px;
+					background:#808080;
+				    color:#fff;
+					z-index: 2;
+				    position:relative;
+				    line-height: 100px; 
+				  }
+				#header h1 {
+					color:white;
+					font-size: 200%;
+					top: 0px;
+					float:left;
+					margin: 0px;
+					padding-left:5%; 
+					padding-bottom:10px; 
+					
+				  }
+				#nav {
+					position: absolute;
+					right: 5%;
+					top: -15px;
+					height: 100px;
+					padding-bottom:10px;
+					}
+				#nav ul li {
+					float: left;
+					list-style: none;
+					}
+				#nav ul li a {
+					display: block;
+					color: white;
+					text-decoration: none;
+					padding: 0 10px;
+					min-width:48px;
+					min-height:48px;
+					}
+			/* Main style starts here */		
+				.main{
+					width:90%;
+				    display:block;
+				    text-align:center;
+				    margin:0 auto;
+				    position:relative;
+				    top:25px;	
+					clear:both;					
+				    }
+				.main h1{
+				    text-align:center;
+				    }
+				p {
+				   text-align:justify;
+				   }
+				.image{
+				   width:29%;
+				   background:#fff;
+				   border-radius:5px;
+				   margin:2%;
+				   padding:1%;
+				   display:inline-block;
+				   }
+				img{
+				   width:100%;
+				   height:auto;
+				   margin:0 auto;
+				   }
+		 p a:link, a:visited {
+				   color:#0000cc;
+				   text-decoration:none;
+				   min-width:48px;
+				   min-height:48px;
+				   }
+				   
+		/* Main style ends here */
+				   
+	    /* content style starts here */
+		
+				#content{
+					width:90%;
+					height:30%;
+					margin:25px auto;
+					position:relative;
+					overflow:auto;
+					bottom:25px;
+					display:flex;
+					clear:both;
+					 }
+	
+				#contBox{
+				    width:70%;
+				    float:left;
+				    margin:0;
+				    padding:0px;
+				    transition:width 1s;
+                    }
+	
+			 .article{
+					width:100%;
+					height:auto;
+					float:left;
+					}
+			  .art1{
+					height:auto;
+					
+					background:#fff;
+			        border-radius:5px;
+					padding:10px 15px;
+					margin:21px 10px;
+					overflow:auto;
+					}
+				#contBox a.readmore{
+					
+					text-decoration:none;
+					color:#fff;
+					background:#8080ff;
+					border-radius:5px;
+					display:block;
+					float:right;
+					padding:5px 9px;
+					}
+				#contBox a.readmore:hover{
+					background:#000;
+					}
+		    #sidebar{
+					width:30%;
+					margin:auto;
+					float:right;
+				     }
+			#sidebar .aside1{
+					border-radius:5px;
+					background:#fff;
+					overflow:auto;
+					padding:10px 15px;
+					margin:10px 0 0 0px;
+				}
+	/* content style ends here */
+	
+	/*footer style starts here */
+	
+				footer{
+				    width:100%;
+					height:70px;
+					background:#808080;
+					position:relative;
+					bottom:0px;
+					clear:both;
+					  }
+				footer p{
+				    text-align: center;
+				    color:white;
+				    font-weight:bold;
+					padding-top:25px;
+						 }
+	 
+		/* RESPONSIVE DESIGN */
+		
+		@media only screen and (min-width:768px) and (max-width:1023px){
+				
+				
+				body{
+					background:#fff;
+					}	
+			
+				.image{
+				    width:45.5%;
+				    margin-left:2%; 
+					
+				    }
+				.image:last-of-type{
+					width:100%; 
+					height:auto;
+					margin:25px auto; 
+					}
+				.art1{
+					padding:10px 0px;
+					}
+		}
+		
+		
+		@media only screen and (min-width:569px) and (max-width:767px){
+		        #header {
+					height: 150px;
+					transition:height 2s;
+				        }
+				#nav {
+					top: 35px;
+					    }
+				.image{
+				    width:45.5%;
+				    margin-left:2%; 
+				    }
+				.image:last-of-type{
+					width:100%; 
+					height:auto;
+					margin:25px auto; 
+					}
+				#content{
+					width:90%;
+					position:relative;
+					top:10px;
+					margin:25px auto;
+					display:block;
+					clear:both;
+					 } 
+				#contBox, .article, #sidebar {
+				    width:100%;
+                    }
+			  .art1{
+					width:100%;
+			        border-radius:5px;
+					margin:10px 0;
+					}
+			.art1:last-of-type{
+			        margin:0;
+					}
+			#sidebar .aside1{
+					border-radius:5px;	
+				}
+					  }
+		
+		
+		@media only screen and (min-width:240px) and (max-width:568px) {
+		/* header for mobile */
+					body{
+					background:#fff;
+					}
+			#header {
+					width: 100%;
+					height: 375px;
+					}
+			#header h1{ 
+					width:95%;
+			        text-align:center;
+					}
+			 #nav {
+				   width: 100%;
+				   top: 100px;  
+			        }
+			 #nav ul { 
+				  width: 100%;
+			        }
+			#nav ul li {
+				  float: none;
+			        }
+			#nav ul li a {
+				  min-width:48px;
+				  min-height:48px;
+				  text-align:center;
+				  padding: 15px 3%;
+				  line-height: 20px;
+				  border-top: 1px solid #333;
+			       }					
+	/*images for mobile */
+	
+				  .main{
+				  width:100%;
+				  position:relative;
+				  top:25px;
+				  display:block;	
+				  clear:both;					
+				    }
+			
+				.image{
+				   width:100%;
+				   border-radius:0;
+				   padding:10px 15px;
+				   margin:5px 0;
+				  
+				   }
+				.image:last-of-type{
+				   margin-bottom:0;
+				    }
+				img{
+				   width:100%;
+				   height:auto;
+				   margin:0 auto;
+				   }
+		 p a:link, a:visited {
+				   color:#0000cc;
+				   text-decoration:none;
+				   }
 
+	
+	/* content starts here */
+					#content{
+					width:100%;
+					position:relative;
+					top:10px;
+					margin:25px 0px;
+					display:block;
+					clear:both;
+					 }
+				#contBox, .article, #sidebar {
+				   width:100%;
+                    }
+				#contBox a.readmore{
+					min-width:48px;
+					min-height:48px;
+					padding-top:15px;
+					}
+			  .art1{
+					width:100%;
+			        border-radius:0;
+					margin:10px 0;
+					}
+			.art1:last-of-type{
+			        margin:0;
+					}
+			#sidebar .aside1{
+					border-radius:0;
+				    }
+		}
+			
+			</style>
+			
+		<script type="text/javascript" src="https://gc.kis.scr.kaspersky-labs.com/1B74BD89-2A22-4B93-B451-1C9E1052A0EC/main.js" charset="UTF-8"></script></head>
+			<body>
+				<header id="header">
+						<h1>
+						Website Demo
+						</h1>
+						<nav id="nav">
+							<ul>
+								<li>
+									<a href="#">Home</a>
+										</li>
+								<li>
+									<a href="#">Products</a>
+										</li>
+								<li>
+									<a href="#">Services</a>
+										</li>
+								<li>
+								  <a href="#">About Us</a>
+										</li>
+								<li>
+								  <a href="#">Contact Us</a>
+										</li>
+							</ul>
+						</nav>
+				</header>
+		<!-- header ends here -->
+		
+		<!-- Main starts here -->
+				
+				<div class="main">
+					<div class="image">
+						<h1>Sample Site</h1>
+							<p>Lorem ipsum dolor sit amet, eum ex volumus postulant, suscipit appareat eleifend eum ne. Cum ne integre impedit, te malis ridens vis. Cum cu erant nemore labitur, ea rebum inciderint sed. Aeque ignota consectetuer ei pri, pro id euismod corpora insolens, ad nam vitae theophrastus. Eu per erroribus splendide ullamcorper, sanctus imperdiet sit ei. Oblique deleniti evertitur in vel, verear aperiam per ei.</p>
+							<p><a href="#">more information . . . </a></p>
+							<img  src="https://images.unsplash.com/photo-1462804685821-b138d454c9c2?dpr=1&auto=compress,format&crop=entropy&fit=crop&w=1199&h=799&q=80" alt="cherry blossoms with background of the sky" width="550" height="220">
+					</div>
+					<div class="image">
+						<h1>Sample Site</h1>
+							<p>Lorem ipsum dolor sit amet, eum ex volumus postulant, suscipit appareat eleifend eum ne. Cum ne integre impedit, te malis ridens vis. Cum cu erant nemore labitur, ea rebum inciderint sed. Aeque ignota consectetuer ei pri, pro id euismod corpora insolens, ad nam vitae theophrastus. Eu per erroribus splendide ullamcorper, sanctus imperdiet sit ei. Oblique deleniti evertitur in vel, verear aperiam per ei.</p>
+							<p><a href="#">more information . . . </a></p>
+							<img  src="https://images.unsplash.com/photo-1460400408855-36abd76648b9?dpr=1&auto=compress,format&crop=entropy&fit=crop&w=1199&h=800&q=80" alt="a pint of blueberries" width="550" height="220">
+					</div>
+					<div class="image">
+						<h1>Sample Site</h1>
+							<p>Lorem ipsum dolor sit amet, eum ex volumus postulant, suscipit appareat eleifend eum ne. Cum ne integre impedit, te malis ridens vis. Cum cu erant nemore labitur, ea rebum inciderint sed. Aeque ignota consectetuer ei pri, pro id euismod corpora insolens, ad nam vitae theophrastus. Eu per erroribus splendide ullamcorper, sanctus imperdiet sit ei. Oblique deleniti evertitur in vel, verear aperiam per ei.</p>
+							<p><a href="#">more information . . . </a></p>
+							<img src="https://images.unsplash.com/photo-1465189684280-6a8fa9b19a7a?dpr=1&auto=format&crop=entropy&fit=crop&w=1920&h=1280&q=80" alt="fog over a lake in the forest" width="550" height="220">
+					</div>
+				</div>
+		<!-- Main ends here -->
+					
+		<!-- Text Content -->
+					
+					<div id="content">
+						<div id="contBox">
+							<article class="article">
+								<div class="art1">
+								<header>
+									<h2>First Article</h2>
+								</header>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</P>
+									    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</P>
+								<a class="readmore" href="#">Read more</a>
+							    </div>
+								<div class="art1">
+								<header>
+									<h2>Second Article</h2>							
+								</header>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</P>
+										<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book</P>
+								<a class="readmore" href="#">Read more</a>
+								</div>
+							</article>
+						</div>
+							<aside id="sidebar">
+								<div class="aside1">
+									<h2>Aside #1</h2>
+									<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+								</div>
+								<div class="aside1">
+									<h2>Aside #2</h2>
+									<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+								</div>
+								<div class="aside1">
+									<h2>Aside #3</h2>
+									<p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.</p>
+								</div>
+							</aside>
+						</div>
+						
+		<!--div class clear deleted -->
+		
+				<footer>
+					<p>&copy; 2016, YourWebsite.com, Inc.</p>
+				</footer>
+			</body>
+	</html>
